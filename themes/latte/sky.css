@@ -8,11 +8,11 @@ window {
 }
 
 button {
-    border-radius: 0;
-    border-color: #04a5e5;
+	border-radius: 0;
+	border-color: #04a5e5;
 	text-decoration-color: #4c4f69;
-    color: #4c4f69;
-	background-color: #ccd0da;
+	color: #4c4f69;
+	background-color: #e6e9ef;
 	border-style: solid;
 	border-width: 1px;
 	background-repeat: no-repeat;
