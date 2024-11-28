@@ -21,6 +21,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: #acb0be;
+	/* 20% Overlay 2, 80% mantle */
+	background-color: rgb(209, 211, 220);
 	outline-style: none;
 }
