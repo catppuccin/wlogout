@@ -29,6 +29,7 @@ button {
 }
 
 button:focus, button:active, button:hover {
-	background-color: #{{ surface2.hex }};
+	/* 20% Overlay 2, 80% mantle */
+	background-color: {{ overlay2 | mix(color=mantle, amount=0.2) | css_rgb }};
 	outline-style: none;
 }
