@@ -3,14 +3,26 @@ name: whiskers
 on:
   workflow_dispatch:
   push:
-    branches: ["main"]
+    branches: [main]
   pull_request:
-    branches: ["main"]
+    branches: [main]
 
 jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: catppuccin/setup-whiskers@v2
-      - run: find -name '*.tera' -exec whiskers {} --check \;
+  run:
+    uses: catppuccin/actions/.github/workflows/whiskers-check.yml@v1
+    with:
+      args: |
+        templates/wlogout.tera
+        templates/icons/wleave/hibernate.tera
+        templates/icons/wleave/lock.tera
+        templates/icons/wleave/logout.tera
+        templates/icons/wleave/reboot.tera
+        templates/icons/wleave/shutdown.tera
+        templates/icons/wleave/suspend.tera
+        templates/icons/wlogout/hibernate.tera
+        templates/icons/wlogout/lock.tera
+        templates/icons/wlogout/logout.tera
+        templates/icons/wlogout/reboot.tera
+        templates/icons/wlogout/shutdown.tera
+        templates/icons/wlogout/suspend.tera
+    secrets: inherit
