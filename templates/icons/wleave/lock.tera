@@ -2,9 +2,9 @@
 whiskers:
   version: ^2.5.1
   matrix:
-    - accent
+    - colour: [rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender, text, subtext1, subtext0, overlay2, overlay1, overlay0, surface2, surface1, surface0, base, mantle, crust]
     - flavor
-  filename: icons/wleave/{{flavor.identifier}}/{{accent}}/lock.svg
+  filename: icons/wleave/{{flavor.identifier}}/{{colour}}/lock.svg
 ---
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <svg
@@ -38,14 +38,14 @@ whiskers:
        id="g5659"
        transform="translate(-0.39044182,-0.69607794)">
       <rect
-         style="fill:none;fill-opacity:1;stroke:#{{flavor.colors[accent].hex}};stroke-width:5.29167;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
+         style="fill:none;fill-opacity:1;stroke:#{{flavor.colors[colour].hex}};stroke-width:5.29167;stroke-linecap:butt;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;stop-color:#000000"
          id="rect3004"
          width="30.99781"
          height="22.635843"
          x="124.35956"
          y="51.020142" />
       <path
-         style="fill:none;stroke:#{{flavor.colors[accent].hex}};stroke-width:5.29167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         style="fill:none;stroke:#{{flavor.colors[colour].hex}};stroke-width:5.29167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
          d="m 130.40841,45.354103 c 0.33488,-4.879835 2.18883,-11.587617 9.85156,-11.587617 11.44717,0 9.05517,16.10332 9.05517,16.10332"
          id="path3006" />
     </g>

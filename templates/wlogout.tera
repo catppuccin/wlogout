@@ -4,9 +4,8 @@ whiskers:
   version: ^2.5.1
   matrix:
     - flavor
-    - colour: [rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender, text, subtext1, subtext0, overlay2, overlay1, overlay0, surface2, surface1, surface0, base, mantle, crust]
-  
-  filename: themes/{{flavor.identifier}}/{{colour}}.css
+    - accent
+  filename: themes/{{flavor.identifier}}/{{accent}}.css
 ---
 * {
   background-image: none;
@@ -19,7 +18,7 @@ window {
 
 button {
   border-radius: 0;
-  border-color: #{{ flavor.colors[colour].hex }};
+  border-color: #{{ flavor.colors[accent].hex }};
   text-decoration-color: #{{ text.hex }};
   color: #{{ text.hex }};
   background-color: #{{ mantle.hex }};
@@ -35,4 +34,3 @@ button:focus, button:active, button:hover {
   background-color: {{ overlay2 | mix(color=mantle, amount=0.2) | css_rgb }};
   outline-style: none;
 }
-
