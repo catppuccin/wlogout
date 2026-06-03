@@ -1,35 +1,38 @@
+
 ---
 whiskers:
   version: ^2.5.1
   matrix:
-    - accent
     - flavor
-  filename: themes/{{flavor.identifier}}/{{accent}}.css
+    - colour: [rosewater, flamingo, pink, mauve, red, maroon, peach, yellow, green, teal, sky, sapphire, blue, lavender, text, subtext1, subtext0, overlay2, overlay1, overlay0, surface2, surface1, surface0, base, mantle, crust]
+  
+  filename: themes/{{flavor.identifier}}/{{colour}}.css
 ---
 * {
-	background-image: none;
-	box-shadow: none;
+  background-image: none;
+  box-shadow: none;
 }
 
 window {
-	background-color: {{ base | mod(opacity=0.9) | css_rgba }};
+  background-color: {{ base | mod(opacity=0.9) | css_rgba }};
 }
 
 button {
-	border-radius: 0;
-	border-color: #{{ flavor.colors[accent].hex }};
-	text-decoration-color: #{{ text.hex }};
-	color: #{{ text.hex }};
-	background-color: #{{ mantle.hex }};
-	border-style: solid;
-	border-width: 1px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 25%;
+  border-radius: 0;
+  border-color: #{{ flavor.colors[colour].hex }};
+  text-decoration-color: #{{ text.hex }};
+  color: #{{ text.hex }};
+  background-color: #{{ mantle.hex }};
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
 }
 
 button:focus, button:active, button:hover {
-	/* 20% Overlay 2, 80% mantle */
-	background-color: {{ overlay2 | mix(color=mantle, amount=0.2) | css_rgb }};
-	outline-style: none;
+  /* 20% Overlay 2, 80% mantle */
+  background-color: {{ overlay2 | mix(color=mantle, amount=0.2) | css_rgb }};
+  outline-style: none;
 }
+

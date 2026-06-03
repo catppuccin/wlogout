@@ -1,0 +1,28 @@
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: rgba(36, 39, 58, 0.90);
+}
+
+button {
+  border-radius: 0;
+  border-color: #1e2030;
+  text-decoration-color: #cad3f5;
+  color: #cad3f5;
+  background-color: #1e2030;
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+  /* 20% Overlay 2, 80% mantle */
+  background-color: rgb(53, 57, 75);
+  outline-style: none;
+}
+

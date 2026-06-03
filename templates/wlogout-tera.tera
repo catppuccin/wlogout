@@ -1,0 +1,43 @@
+---
+whiskers:
+  version: ^2.5.1
+  filename: templates/wlogout.tera
+---
+
+---
+whiskers:
+  version: ^2.5.1
+  matrix:
+    - flavor
+    - colour: [{%- for id, color in flavors["macchiato"].colors -%}{{ id }}{% if not loop.last %}, {% endif %}{% endfor %}]
+  {% raw %}
+  filename: themes/{{flavor.identifier}}/{{colour}}.css
+---
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: {{ base | mod(opacity=0.9) | css_rgba }};
+}
+
+button {
+  border-radius: 0;
+  border-color: #{{ flavor.colors[colour].hex }};
+  text-decoration-color: #{{ text.hex }};
+  color: #{{ text.hex }};
+  background-color: #{{ mantle.hex }};
+  border-style: solid;
+  border-width: 1px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25%;
+}
+
+button:focus, button:active, button:hover {
+  /* 20% Overlay 2, 80% mantle */
+  background-color: {{ overlay2 | mix(color=mantle, amount=0.2) | css_rgb }};
+  outline-style: none;
+}
+{% endraw %}
